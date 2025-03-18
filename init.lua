@@ -107,6 +107,9 @@ vim.opt.number = true
 -- Disable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = ''
 
+-- Custom Bind
+vim.keymap.set('n', '<leader>o', vim.cmd.Tex)
+
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
 
