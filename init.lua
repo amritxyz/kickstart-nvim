@@ -102,7 +102,7 @@ vim.g.have_nerd_font = false
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
--- vim.opt.relativenumber = true
+vim.opt.relativenumber = true
 
 -- Disable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = ''
@@ -930,13 +930,15 @@ require('lazy').setup({
     -- change the command in the config to whatever the name of that colorscheme is.
     --
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-    'folke/tokyonight.nvim',
+    -- 'folke/tokyonight.nvim',
     -- 'ellisonleao/gruvbox.nvim',
+    'craftzdog/solarized-osaka.nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     config = function()
       ---@diagnostic disable-next-line: missing-fields
-      require('tokyonight').setup {
+      -- require('tokyonight').setup {
       -- require('gruvbox').setup {
+      require('solarized-osaka').setup {
         styles = {
           comments = { italic = false }, -- Disable italics in comments
         },
@@ -945,8 +947,9 @@ require('lazy').setup({
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'tokyonight'
+      -- vim.cmd.colorscheme 'tokyonight'
       -- vim.cmd.colorscheme 'gruvbox'
+      vim.cmd.colorscheme 'solarized-osaka'
       vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
       vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
     end,
@@ -1068,6 +1071,16 @@ require('lazy').setup({
     },
   },
 })
+
+-- Custom AddOn Config
+-- UnderCurl Support
+vim.api.nvim_set_hl(0, "SpellBad", { undercurl = true, sp = "#DC322F" })
+vim.api.nvim_set_hl(0, "SpellCap", { undercurl = true, sp = "#B58900" })
+vim.api.nvim_set_hl(0, "SpellRare", { undercurl = true, sp = "#268BD2" })
+vim.api.nvim_set_hl(0, "SpellLocal", { undercurl = true, sp = "#2AA198" })
+
+vim.o.spell = true
+vim.o.spelllang = "en_us"
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
