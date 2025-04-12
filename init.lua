@@ -122,7 +122,15 @@ vim.schedule(function()
 end)
 
 -- Enable break indent
-vim.opt.breakindent = true
+-- vim.opt.breakindent = true
+
+-- indent and wrap
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.smartindent = true
+vim.opt.wrap = false
 
 -- Save undo history
 vim.opt.undofile = true
