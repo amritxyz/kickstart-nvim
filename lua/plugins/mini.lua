@@ -11,7 +11,7 @@ return { -- Collection of various small independent plugins/modules
     require('mini.surround').setup()
 
     local statusline = require 'mini.statusline'
-    statusline.setup { use_icons = vim.g.have_nerd_font }
+    statusline.setup { use_icons = false }
 
     ---@diagnostic disable-next-line: duplicate-set-field
     statusline.section_location = function()

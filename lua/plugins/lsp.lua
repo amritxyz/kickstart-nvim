@@ -115,7 +115,7 @@ return {
       clangd = {},
       -- gopls = {},
       pyright = {},
-      -- jdtls = {},
+      jdtls = {},
       -- rust_analyzer = {},
       --
       -- https://github.com/pmizio/typescript-tools.nvim
