@@ -14,4 +14,4 @@ nvim
 ---
 
 ## Plugins (Via. Lazy.nvim)
-[All-Plugins](https://github.com/amritxyz/kickstart-nvim/blob/main/lua/plugins).
+[**All-Plugins**](https://github.com/amritxyz/kickstart-nvim/blob/main/lua/plugins).
