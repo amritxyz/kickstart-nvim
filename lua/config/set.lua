@@ -1,7 +1,7 @@
 -- Setmaps
 vim.g.mapleader = ' '
 vim.o.spell = true
-vim.o.spelllang = "en_us"
+vim.o.spelllang = 'en_us'
 vim.g.maplocalleader = ' '
 vim.g.have_nerd_font = false
 vim.opt.number = true
