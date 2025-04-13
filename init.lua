@@ -928,14 +928,14 @@ require('lazy').setup({
     --
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
     -- 'folke/tokyonight.nvim',
-    'ellisonleao/gruvbox.nvim',
-    -- 'craftzdog/solarized-osaka.nvim',
+    -- 'ellisonleao/gruvbox.nvim',
+    'craftzdog/solarized-osaka.nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     config = function()
       ---@diagnostic disable-next-line: missing-fields
       -- require('tokyonight').setup {
-      require('gruvbox').setup {
-      -- require('solarized-osaka').setup {
+      -- require('gruvbox').setup {
+      require('solarized-osaka').setup {
         styles = {
           comments = { italic = false }, -- Disable italics in comments
         },
@@ -945,8 +945,8 @@ require('lazy').setup({
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
       -- vim.cmd.colorscheme 'tokyonight'
-      vim.cmd.colorscheme 'gruvbox'
-      -- vim.cmd.colorscheme 'solarized-osaka'
+      -- vim.cmd.colorscheme 'gruvbox'
+      vim.cmd.colorscheme 'solarized-osaka'
       vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
       vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
     end,
