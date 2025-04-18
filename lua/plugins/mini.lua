@@ -14,49 +14,47 @@ return {
       return '%2l:%-2v'
     end
 
-    local solarized = {
-      base03 = '#002b36',
-      base02 = '#073642',
-      base01 = '#586e75',
-      base00 = '#657b83',
-      base0 = '#839496',
-      base1 = '#93a1a1',
-      base2 = '#eee8d5',
-      base3 = '#fdf6e3',
-      yellow = '#b58900',
-      orange = '#cb4b16',
-      red = '#dc322f',
-      magenta = '#d33682',
-      violet = '#6c71c4',
-      blue = '#268bd2',
-      cyan = '#2aa198',
-      green = '#859900',
+    local gruvbox = {
+      dark0_hard = '#1d2021',
+      dark0 = '#282828',
+      dark1 = '#3c3836',
+      dark2 = '#504945',
+      dark3 = '#665c54',
+      dark4 = '#7c6f64',
+      neutral_red = '#fb4934',
+      neutral_orange = '#fe8019',
+      neutral_yellow = '#fabd2f',
+      neutral_green = '#b8bb26',
+      neutral_blue = '#83a598',
+      neutral_purple = '#d3869b',
+      neutral_aqua = '#8ec07c',
+      neutral_gray = '#928374',
     }
 
     vim.api.nvim_set_hl(0, 'StatusLine', {
-      fg = solarized.base0,
-      bg = solarized.base02,
+      fg = gruvbox.neutral_gray,
+      bg = gruvbox.dark0,
       bold = false,
     })
 
     vim.api.nvim_set_hl(0, 'StatusLineNC', {
-      fg = solarized.base01,
-      bg = solarized.base03,
+      fg = gruvbox.dark1,
+      bg = gruvbox.dark0_hard,
       bold = false,
     })
 
     local mode_colors = {
-      Normal = solarized.blue,
-      Insert = solarized.green,
-      Visual = solarized.magenta,
-      Replace = solarized.red,
-      Command = solarized.orange,
-      Other = solarized.base01,
+      Normal = gruvbox.neutral_blue,
+      Insert = gruvbox.neutral_green,
+      Visual = gruvbox.neutral_purple,
+      Replace = gruvbox.neutral_red,
+      Command = gruvbox.neutral_orange,
+      Other = gruvbox.dark1,
     }
 
     for mode, color in pairs(mode_colors) do
       vim.api.nvim_set_hl(0, 'MiniStatuslineMode' .. mode, {
-        fg = solarized.base03,
+        fg = gruvbox.dark0_hard,
         bg = color,
         bold = false,
       })

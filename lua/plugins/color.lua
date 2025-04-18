@@ -1,19 +1,14 @@
 return {
-  -- 'folke/tokyonight.nvim',
-  -- 'ellisonleao/gruvbox.nvim',
-  'craftzdog/solarized-osaka.nvim',
+  'ellisonleao/gruvbox.nvim',
   priority = 1000,
   config = function()
-    ---@diagnostic disable-next-line: missing-fields
-    -- require('tokyonight').setup {
-    -- require('gruvbox').setup {
-    require('solarized-osaka').setup {
+    require('gruvbox').setup {
       styles = {
         comments = { italic = true },
         keywords = { italic = true },
       },
       on_highlights = function(hl, c)
-        local prompt = '#2d3149'
+        local prompt = '#1d2021'
         hl.TelescopeNormal = {
           bg = c.bg_dark,
           fg = c.fg_dark,
@@ -23,29 +18,30 @@ return {
           fg = c.bg_dark,
         }
         hl.TelescopePromptNormal = {
-          bg = c.bg_dark,
+          bg = prompt,
         }
         hl.TelescopePromptBorder = {
-          bg = c.bg_dark,
-          fg = c.bg_dark,
+          bg = prompt,
+          fg = prompt,
         }
         hl.TelescopePromptTitle = {
-          bg = c.bg_dark,
-          fg = c.bg_dark,
+          bg = prompt,
+          fg = prompt,
         }
         hl.TelescopePreviewTitle = {
-          bg = c.bg_dark,
-          fg = c.bg_dark,
+          bg = prompt,
+          fg = prompt,
         }
         hl.TelescopeResultsTitle = {
-          bg = c.bg_dark,
-          fg = c.bg_dark,
+          bg = prompt,
+          fg = prompt,
         }
       end,
     }
-    -- vim.cmd.colorscheme 'tokyonight'
-    -- vim.cmd.colorscheme 'gruvbox'
-    vim.cmd.colorscheme 'solarized-osaka'
+
+    vim.cmd.colorscheme 'gruvbox'
+
+    -- Set background of Normal and NormalFloat to transparent for minimal look
     vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
     vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
   end,
