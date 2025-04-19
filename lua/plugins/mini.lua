@@ -46,8 +46,8 @@ return {
     })
 
     local mode_colors = {
-      Normal = solarized.blue,
-      Insert = solarized.green,
+      Normal = solarized.base0,
+      Insert = solarized.blue,
       Visual = solarized.magenta,
       Replace = solarized.red,
       Command = solarized.orange,
