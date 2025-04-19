@@ -18,6 +18,32 @@ return {
     -- [[ Configure Telescope ]]
     -- See `:help telescope` and `:help telescope.setup()`
     require('telescope').setup {
+      defaults = {
+        file_ignore_patterns = {
+          'node_modules',
+          'dist',
+          'yarn.lock',
+          '.cache/',
+          '.git/',
+          '.mozilla/',
+          '.local/share/',
+          'share/',
+          '.local/state/',
+          'state/',
+          -- "build",
+        },
+        layout_config = {
+          horizontal = {
+            width = 0.9,
+            height = 0.9,
+            preview_width = 0.55,
+          },
+          vertical = {
+            width = 0.95,
+            height = 0.9,
+          },
+        },
+      },
       extensions = {
         ['ui-select'] = {
           require('telescope.themes').get_dropdown(),
