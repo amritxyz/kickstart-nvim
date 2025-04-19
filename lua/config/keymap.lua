@@ -19,4 +19,7 @@ vim.keymap.set('n', '<leader>v', ':vsplit <C-r>=expand("%:p:h").."/"<CR>', { sil
 vim.keymap.set('n', '<leader>b', ':split <C-r>=expand("%:p:h").."/"<CR>', { silent = false })
 vim.keymap.set('n', '<leader>ss', ':%s//g<Left><Left>', { noremap = true, silent = false })
 
+vim.keymap.set('n', '<leader>dl', ':LspStop<CR>', { noremap = true, silent = false })
+vim.keymap.set('n', '<leader>el', ':LspStart<CR>', { noremap = true, silent = false })
+
 vim.cmd 'autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o'
