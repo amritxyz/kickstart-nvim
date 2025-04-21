@@ -23,3 +23,8 @@ vim.keymap.set('n', '<leader>dl', ':LspStop<CR>', { noremap = true, silent = fal
 vim.keymap.set('n', '<leader>el', ':LspStart<CR>', { noremap = true, silent = false })
 
 vim.cmd 'autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o'
+
+vim.keymap.set('n', '<leader>c', function()
+  vim.cmd 'write!'
+  vim.cmd('!compiler "' .. vim.fn.expand '%:p' .. '"')
+end, { noremap = true, silent = true })
