@@ -1,8 +1,8 @@
 return {
-  'sainnhe/gruvbox-material',
+  'idr4n/github-monochrome.nvim',
   priority = 1000,
-  init = function()
-    vim.cmd.colorscheme 'gruvbox-material'
-    vim.cmd.hi 'Comment gui=none'
+  config = function()
+    require('github-monochrome').setup {}
+    vim.cmd.colorscheme 'github-monochrome-solarized'
   end,
 }
