@@ -119,7 +119,7 @@ return {
       -- rust_analyzer = {},
       --
       -- https://github.com/pmizio/typescript-tools.nvim
-      -- ts_ls = {},
+      ts_ls = {},
       --
 
       lua_ls = {
