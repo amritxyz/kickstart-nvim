@@ -119,6 +119,8 @@ return {
       -- rust_analyzer = {},
       --
       -- https://github.com/pmizio/typescript-tools.nvim
+      intelephense = {},
+      tailwindcss = {},
       ts_ls = {},
       --
 
