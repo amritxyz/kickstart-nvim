@@ -6,7 +6,7 @@ return {
 
     local statusline = require 'mini.statusline'
     statusline.setup {
-      use_icons = false,
+      use_icons = true,
     }
 
     ---@diagnostic disable-next-line: duplicate-set-field
