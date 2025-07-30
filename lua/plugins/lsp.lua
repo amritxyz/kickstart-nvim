@@ -5,8 +5,18 @@ return {
     'williamboman/mason-lspconfig.nvim',
     'WhoIsSethDaniel/mason-tool-installer.nvim',
     -- 'nvim-java/nvim-java',
-    { 'j-hui/fidget.nvim', opts = {} },
-    'hrsh7th/cmp-nvim-lsp',
+    {
+      'j-hui/fidget.nvim',
+      opts = {
+        notification = {
+          winhighlight = {
+            border = 'FloatBorder',
+            background = 'Normal',
+          },
+        },
+      },
+      'hrsh7th/cmp-nvim-lsp',
+    },
   },
   config = function()
     vim.api.nvim_create_autocmd('LspAttach', {
@@ -113,6 +123,7 @@ return {
 
     local servers = {
       clangd = {},
+      zls = {},
       -- gopls = {},
       pyright = {},
       jdtls = {},
