@@ -123,7 +123,8 @@ return {
 
     local servers = {
       clangd = {},
-      zls = {},
+      -- zls = {},
+      html = {},
       -- gopls = {},
       pyright = {},
       jdtls = {},
