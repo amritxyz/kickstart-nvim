@@ -12,7 +12,7 @@ return {
       end,
     },
     { 'nvim-telescope/telescope-ui-select.nvim' },
-    { 'nvim-tree/nvim-web-devicons', enabled = true },
+    { 'nvim-tree/nvim-web-devicons', enabled = false },
   },
   config = function()
     -- [[ Configure Telescope ]]
