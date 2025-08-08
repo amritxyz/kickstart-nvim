@@ -2,6 +2,7 @@ require 'config.set'
 require 'config.keymap'
 require 'config.undercurl'
 require 'config.api'
+require 'config.extras'
 
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
