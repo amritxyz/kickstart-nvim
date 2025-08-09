@@ -36,3 +36,7 @@ vim.opt.smartindent = true
 -- vim.opt.tabstop = 8
 -- vim.opt.softtabstop = 8
 -- vim.opt.shiftwidth = 8
+
+vim.g.neovide_background_opacity = 0.9 -- Set background opacity
+vim.g.neovide_transparency = true -- Enable transparency
+vim.g.neovide_background_blur = 4 -- Enable and set blur strength
