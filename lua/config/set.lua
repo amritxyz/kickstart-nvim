@@ -33,10 +33,13 @@ vim.opt.wrap = false
 vim.opt.breakindent = true
 vim.opt.expandtab = false
 vim.opt.smartindent = true
+
+vim.highlight.priorities.semantic_tokens = 95
+
 -- vim.opt.tabstop = 8
 -- vim.opt.softtabstop = 8
 -- vim.opt.shiftwidth = 8
 
-vim.g.neovide_background_opacity = 0.9 -- Set background opacity
-vim.g.neovide_transparency = true -- Enable transparency
-vim.g.neovide_background_blur = 4 -- Enable and set blur strength
+-- vim.g.neovide_background_opacity = 0.9
+-- vim.g.neovide_transparency = true
+-- vim.g.neovide_background_blur = 4
