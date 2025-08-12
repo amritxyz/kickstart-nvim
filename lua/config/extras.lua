@@ -6,7 +6,7 @@ vim.opt.termguicolors = true
 
 vim.opt.signcolumn = 'yes'
 vim.opt.colorcolumn = '100'
-vim.opt.showmatch = true
+vim.opt.showmatch = false -- show the opened braces
 vim.opt.matchtime = 2
 vim.opt.completeopt = 'menuone,noinsert,noselect'
 vim.opt.showmode = false
@@ -51,14 +51,11 @@ for _, key in ipairs { 'f', 'd', 'c', 'o', 'a', 'A', 'M', 'R', 'v', 'x' } do
 end
 
 -- Assign fold toggle to DA (D followed by A)
-vim.keymap.set('n', 'da', 'za', { desc = '[DA] Toggle fold' })
+-- vim.keymap.set('n', 'da', 'za', { desc = '[DA] Toggle fold' })
 
 -- Split behavior
 vim.opt.splitbelow = true
 vim.opt.splitright = true
-
--- Normal mode mappings
-vim.keymap.set('n', '<leader>c', ':nohlsearch<CR>', { desc = 'Clear search highlights' })
 
 -- Center screen when jumping
 vim.keymap.set('n', 'n', 'nzzzv', { desc = 'Next search result (centered)' })
