@@ -43,6 +43,7 @@ vim.opt.encoding = 'UTF-8'
 
 -- Folding settings
 vim.opt.foldmethod = 'expr'
+vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
 vim.opt.foldlevel = 99
 
 -- disable all z-prefix keys
@@ -51,7 +52,7 @@ for _, key in ipairs { 'f', 'd', 'c', 'o', 'a', 'A', 'M', 'R', 'v', 'x' } do
 end
 
 -- Assign fold toggle to DA (D followed by A)
--- vim.keymap.set('n', 'da', 'za', { desc = '[DA] Toggle fold' })
+vim.keymap.set('n', '<leader>fo', 'za', { desc = '[DA] Toggle fold' })
 
 -- Split behavior
 vim.opt.splitbelow = true
