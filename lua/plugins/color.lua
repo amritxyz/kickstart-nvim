@@ -1,10 +1,10 @@
 return {
-  'idr4n/github-monochrome.nvim',
+  'sainnhe/gruvbox-material',
   priority = 1000,
-  config = function()
-    require('github-monochrome').setup {}
-    vim.cmd.colorscheme 'github-monochrome-solarized'
-    -- vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
-    -- vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
+  init = function()
+    vim.cmd.colorscheme 'gruvbox-material'
+    vim.cmd.hi 'Comment gui=none'
+    vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
+    vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none', fg = '#ebdbb2' })
   end,
 }
