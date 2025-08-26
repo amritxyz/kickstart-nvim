@@ -9,3 +9,12 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 vim.api.nvim_set_hl(0, 'MiniStatuslineMode', {
   bold = false,
 })
+
+vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile', 'BufEnter' }, {
+  pattern = '/tmp/bash-*',
+  callback = function()
+    vim.opt_local.spell = true
+    vim.opt_local.spelllang = 'en_us'
+    vim.cmd 'syntax spell toplevel'
+  end,
+})
