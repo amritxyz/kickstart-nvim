@@ -150,6 +150,21 @@ hi('Cursor', c.base03, c.blue)
 hi('TermCursor', c.base03, c.blue)
 hi('TermCursorNC', c.base03, c.base01)
 
+-- === Telescope highlights ===
+hi('TelescopeNormal', c.base0, c.base03) -- main area
+hi('TelescopeBorder', c.base0, c.base03) -- border
+-- hi('TelescopePromptNormal', c.base0, c.base02) -- prompt area
+-- hi('TelescopePromptBorder', c.blue, c.base02) -- prompt border
+hi('TelescopePromptPrefix', c.green, nil) -- prompt symbol (like >)
+hi('TelescopeSelection', c.base0, c.base02, 'bold') -- selected item
+hi('TelescopeSelectionCaret', c.red, c.base02, 'bold') -- caret
+hi('TelescopeMatching', c.orange) -- matched text
+hi('TelescopeMultiSelection', c.yellow) -- multi-selection items
+hi('TelescopeTitle', c.blue, c.base03, 'bold')
+hi('TelescopePreviewTitle', c.cyan, c.base03, 'bold')
+hi('TelescopePromptTitle', c.green, nil, 'bold')
+hi('TelescopeResultsTitle', c.base0, c.base03, 'bold')
+
 vim.cmd [[
   hi! link Function      Identifier
   hi! link Keyword       Keyword
