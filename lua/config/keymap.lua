@@ -22,6 +22,9 @@ vim.keymap.set('n', '<leader>ss', ':%s//g<Left><Left>', { noremap = true, silent
 vim.keymap.set('n', '<leader>dl', ':LspStop<CR>', { noremap = true, silent = false })
 vim.keymap.set('n', '<leader>el', ':LspStart<CR>', { noremap = true, silent = false })
 
+vim.keymap.set('n', '<leader>li', ':0r ~/.config/nvim/non_lua/f_license_snippets/<C-d>', { silent = true })
+vim.keymap.set('n', '<leader>lI', ':0r ~/.config/nvim/non_lua/og_license_snippets/<C-d>', { silent = true })
+
 vim.cmd 'autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o'
 
 vim.keymap.set('n', '<leader>c', function()
