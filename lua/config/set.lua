@@ -37,6 +37,8 @@ vim.opt.smartindent = true
 
 vim.highlight.priorities.semantic_tokens = 95
 
+-- vim.cmd [[autocmd BufNewFile  *.jsx 0r $HOME/.config/nvim/snippets/auto-load/jsx.jsx|normal Gddgg0fC]]
+
 -- vim.opt.tabstop = 8
 -- vim.opt.softtabstop = 8
 -- vim.opt.shiftwidth = 8

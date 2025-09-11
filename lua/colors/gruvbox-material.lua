@@ -2,45 +2,41 @@
 
 local M = {}
 
--- Gruvbox Material Dark palette (adapted from provided text)
--- Using the 'material' variant colors as seen in the text
 local c = {
-  -- Background/Foreground
-  bg0 = '#2c2c2c', -- base03 equivalent
-  bg1 = '#32302f', -- base02 equivalent
-  bg2 = '#3c3836', -- base01 equivalent (darker grey)
-  bg3 = '#504945', -- base00 equivalent (grey)
-  bg4 = '#665c54', -- base1 equivalent (lighter grey)
-  bg5 = '#7c6f64', -- base2 equivalent (even lighter grey)
-  fg0 = '#d4be98', -- base0 equivalent (main fg)
-  fg1 = '#ddc7a1', -- base1 equivalent (lighter fg)
+  bg0 = '#1d2021',
+  bg1 = '#32302f',
+  bg2 = '#3c3836',
+  bg3 = '#504945',
+  bg4 = '#665c54',
+  bg5 = '#7c6f64',
+  fg0 = '#d4be98',
+  fg1 = '#ddc7a1',
 
   -- Colors
   red = '#ea6962',
   orange = '#e78a4e',
   yellow = '#d8a657',
   green = '#a9b665',
-  aqua = '#89b482', -- cyan equivalent
+  aqua = '#89b482',
   blue = '#7daea3',
-  purple = '#d3869b', -- violet/magenta equivalent
+  purple = '#d3869b',
 
-  -- Greys (from provided text)
-  grey0 = '#7c6f64', -- bg5
-  grey1 = '#928374', -- DiffDelete fg / Comment
-  grey2 = '#a89984', -- PmenuSel fg / TabLineSel fg
+  grey0 = '#7c6f64',
+  grey1 = '#928374',
+  grey2 = '#a89984',
 
-  -- Diff background colors (inferred from names in provided text)
-  bg_diff_green = '#34381b', -- Example, adjust if needed
-  bg_diff_red = '#3c1f1e', -- Example, adjust if needed
-  bg_diff_blue = '#24334d', -- Example, adjust if needed
+  -- Diff background colors
+  bg_diff_green = '#34381b',
+  bg_diff_red = '#3c1f1e',
+  bg_diff_blue = '#24334d',
 
-  -- Visual/Selection background (inferred)
-  bg_visual_red = '#452d2d', -- Example, adjust if needed
-  bg_visual_yellow = '#453d2d', -- Example, adjust if needed
+  -- Visual/Selection background
+  bg_visual_red = '#452d2d',
+  bg_visual_yellow = '#453d2d',
 
   -- Special backgrounds (inferred)
-  bg_dim = '#232323', -- Example, adjust if needed
-  bg_current_word = '#3a3632', -- Example, adjust if needed
+  bg_dim = '#232323',
+  bg_current_word = '#3a3632',
 }
 
 -- Safe highlight function
