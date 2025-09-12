@@ -14,12 +14,52 @@ return {
       return '%2l:%-2v'
     end
 
-    vim.api.nvim_set_hl(0, 'StatusLine', { bold = false })
-    vim.api.nvim_set_hl(0, 'StatusLineNC', { bold = false })
-    vim.api.nvim_set_hl(0, 'MiniStatuslineModeNormal', { fg = '#1d2021', bg = '#a89984', bold = false })
-    vim.api.nvim_set_hl(0, 'MiniStatuslineModeInsert', { fg = '#1d2021', bg = '#a9b665', bold = false })
-    vim.api.nvim_set_hl(0, 'MiniStatuslineModeVisual', { fg = '#1d2021', bg = '#ea6962', bold = false })
-    vim.api.nvim_set_hl(0, 'MiniStatuslineModeReplace', { fg = '#1d2021', bg = '#d8a657', bold = false })
-    vim.api.nvim_set_hl(0, 'MiniStatuslineModeCommand', { fg = '#1d2021', bg = '#7daea3', bold = false })
+    local solarized = {
+      base03 = '#002b36',
+      base02 = '#073642',
+      base01 = '#586e75',
+      base00 = '#657b83',
+      base0 = '#839496',
+      base1 = '#93a1a1',
+      base2 = '#eee8d5',
+      base3 = '#fdf6e3',
+      yellow = '#b58900',
+      orange = '#cb4b16',
+      red = '#dc322f',
+      magenta = '#d33682',
+      violet = '#6c71c4',
+      blue = '#268bd2',
+      cyan = '#2aa198',
+      green = '#859900',
+    }
+
+    vim.api.nvim_set_hl(0, 'StatusLine', {
+      fg = solarized.base0,
+      bg = solarized.base02,
+      bold = false,
+    })
+
+    vim.api.nvim_set_hl(0, 'StatusLineNC', {
+      fg = solarized.base01,
+      bg = solarized.base03,
+      bold = false,
+    })
+
+    local mode_colors = {
+      Normal = solarized.base0,
+      Insert = solarized.blue,
+      Visual = solarized.magenta,
+      Replace = solarized.red,
+      Command = solarized.orange,
+      Other = solarized.base01,
+    }
+
+    for mode, color in pairs(mode_colors) do
+      vim.api.nvim_set_hl(0, 'MiniStatuslineMode' .. mode, {
+        fg = solarized.base03,
+        bg = color,
+        bold = false,
+      })
+    end
   end,
 }
