@@ -77,7 +77,7 @@ hi('Folded', c.grey1, c.bg1)
 hi('SignColumn', nil, c.bg0) -- Often same as Normal bg or slightly different
 hi('ColorColumn', nil, c.bg1)
 hi('CursorLine', nil, c.bg1)
-hi('Visual', nil, c.bg2) -- Often uses a darker background
+hi('Visual', nil, c.bg4) -- Often uses a darker background
 hi('Pmenu', c.fg1, c.bg1)
 hi('PmenuSel', c.bg0, c.blue, 'bold') -- Inverted for selection
 hi('WildMenu', c.bg0, c.yellow, 'bold') -- Inverted for emphasis
