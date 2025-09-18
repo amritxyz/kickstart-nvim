@@ -31,15 +31,3 @@ vim.keymap.set('n', '<leader>c', function()
   vim.cmd 'write!'
   vim.cmd('!compiler "' .. vim.fn.expand '%:p' .. '"')
 end, { noremap = true, silent = true })
-
-vim.keymap.set('n', '<leader>gj', function()
-  require('todo-comments').jump_next()
-end, { desc = 'Next todo comment' })
-
-vim.keymap.set('n', '<leader>gk', function()
-  require('todo-comments').jump_prev()
-end, { desc = 'Previous todo comment' })
-
-vim.keymap.set('n', '<leader>gl', function()
-  require('todo-comments').jump_next { keywords = { 'ERROR', 'WARNING' } }
-end, { desc = 'Next error/warning todo comment' })
