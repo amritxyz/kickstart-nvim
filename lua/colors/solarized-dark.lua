@@ -98,14 +98,14 @@ hi('DiagnosticHint', c.green)
 
 -- === TODO/INFO/NOTE ===
 hi('TodoHighlight', c.yellow, c.base03, 'bold')
-hi('FixmeHighlight', c.red, c.base03, 'bold')
+hi('FixHighlight', c.red, c.base03, 'bold')
 hi('NoteHighlight', c.green, c.base03, 'bold')
 hi('InfoHighlight', c.orange, c.base03, 'bold')
 vim.cmd [[
   augroup HighlightCommentsKeywords
     autocmd!
     autocmd BufEnter,BufReadPost * call matchadd("TodoHighlight", "\\v\\s*TODO:")
-    autocmd BufEnter,BufReadPost * call matchadd("FixmeHighlight", "\\v\\s*FIXME:")
+    autocmd BufEnter,BufReadPost * call matchadd("FixHighlight", "\\v\\s*FIX:")
     autocmd BufEnter,BufReadPost * call matchadd("NoteHighlight", "\\v\\s*NOTE:")
     autocmd BufEnter,BufReadPost * call matchadd("InfoHighlight", "\\v\\s*INFO:")
   augroup END
