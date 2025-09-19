@@ -54,7 +54,7 @@ end
 hi('Normal', c.base0, c.base03)
 hi('LineNr', c.base01, c.base02)
 hi('CursorLineNr', c.base1, c.base02, 'bold')
-hi('StatusLine', c.base1, c.base02, 'bold')
+hi('StatusLine', c.base1, c.base02)
 hi('StatusLineNC', c.base00, c.base02)
 hi('VertSplit', c.base02, c.base02)
 hi('Folded', c.base01, c.base02)

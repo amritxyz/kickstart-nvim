@@ -70,7 +70,7 @@ end
 hi('Normal', c.fg0, c.bg0)
 hi('LineNr', c.grey1, c.bg1)
 hi('CursorLineNr', c.fg1, c.bg1, 'bold')
-hi('StatusLine', c.grey2, c.bg1, 'bold')
+hi('StatusLine', c.grey2, c.bg1)
 hi('StatusLineNC', c.grey1, c.bg1)
 hi('VertSplit', c.bg3, c.bg0) -- Adjusted for contrast
 hi('Folded', c.grey1, c.bg1)
