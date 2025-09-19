@@ -67,7 +67,7 @@ end
 -- vim.g.colors_name = 'gruvbox'
 
 -- === UI Elements ===
-hi('Normal', c.fg0, c.bg0)
+hi('Normal', c.fg0, 'none')
 hi('LineNr', c.grey1, c.bg1)
 hi('CursorLineNr', c.fg1, c.bg1, 'bold')
 hi('StatusLine', c.grey2, c.bg1)
@@ -249,8 +249,8 @@ for group, color in pairs(treesitter) do
   hi(group, color)
 end
 
-hi('LspReferenceText', nil, c.base04, 'underline')
-hi('LspReferenceRead', nil, c.base04, 'underline')
-hi('LspReferenceWrite', nil, c.base04, 'underline')
+hi('LspReferenceText', nil, c.base02, 'none')
+hi('LspReferenceRead', nil, c.base02, 'none')
+hi('LspReferenceWrite', nil, c.base02, 'none')
 
 return M

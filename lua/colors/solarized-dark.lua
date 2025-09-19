@@ -61,7 +61,7 @@ hi('Folded', c.base01, c.base02)
 hi('SignColumn', nil, c.base02)
 hi('ColorColumn', nil, c.base02)
 hi('CursorLine', nil, c.base02)
-hi('Visual', nil, c.base01)
+hi('Visual', nil, '#30525c')
 hi('Pmenu', c.base1, c.base02)
 hi('PmenuSel', c.base03, c.yellow, 'bold')
 hi('WildMenu', c.base03, c.yellow, 'bold')
@@ -228,8 +228,8 @@ for group, color in pairs(treesitter) do
   hi(group, color)
 end
 
-hi('LspReferenceText', nil, c.base04, 'underline')
-hi('LspReferenceRead', nil, c.base04, 'underline')
-hi('LspReferenceWrite', nil, c.base04, 'underline')
+vim.api.nvim_set_hl(0, 'LspReferenceText', { bg = '#30525c' })
+vim.api.nvim_set_hl(0, 'LspReferenceRead', { bg = '#30525c' })
+vim.api.nvim_set_hl(0, 'LspReferenceWrite', { bg = '#30525c' })
 
 return M
