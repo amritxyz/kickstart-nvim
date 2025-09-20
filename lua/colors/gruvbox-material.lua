@@ -73,21 +73,21 @@ hi('LineNr', c.grey1, c.bg1)
 hi('CursorLineNr', c.fg1, c.bg1, 'bold')
 hi('StatusLine', c.grey2, c.bg1)
 hi('StatusLineNC', c.grey1, c.bg1)
-hi('VertSplit', c.bg3, c.bg0) -- Adjusted for contrast
+hi('VertSplit', c.bg3, c.bg0)
 hi('Folded', c.grey1, c.bg1)
-hi('SignColumn', nil, c.bg0) -- Often same as Normal bg or slightly different
+hi('SignColumn', nil, c.bg0)
 hi('ColorColumn', nil, c.bg1)
 hi('CursorLine', nil, c.bg1)
-hi('Visual', nil, c.bg2) -- Often uses a darker background
+hi('Visual', nil, c.bg2)
 hi('Pmenu', c.fg1, c.bg1)
 hi('PmenuSel', c.bg0, c.blue, 'bold') -- Inverted for selection
 hi('WildMenu', c.bg0, c.yellow, 'bold') -- Inverted for emphasis
 hi('ErrorMsg', c.red, nil, 'bold')
-hi('WarningMsg', c.yellow) -- Changed to yellow for warning
+hi('WarningMsg', c.yellow)
 hi('Title', c.blue, nil, 'bold')
 
 -- === Syntax groups ===
-hi('cInclude', c.purple) -- PreProc like include
+hi('cInclude', c.purple)
 hi('Keyword', c.red)
 hi('Conditional', c.red)
 hi('Repeat', c.red)
@@ -174,7 +174,7 @@ hi('Whitespace', c.grey1)
 hi('EndOfBuffer', c.bg0)
 
 -- === Popup / Completion ===
-hi('PmenuSbar', nil, c.bg2) -- Slightly different shade for scrollbar
+hi('PmenuSbar', nil, c.bg2)
 hi('PmenuThumb', nil, c.grey1)
 
 -- === Cursor / selections ===
@@ -222,14 +222,14 @@ vim.cmd [[
   hi! link FoldColumn    SignColumn
 ]]
 
--- Treesitter overrides (adjusted for Gruvbox Material feel)
+-- Treesitter overrides
 local treesitter = {
   ['@keyword'] = c.red,
   ['@conditional'] = c.red,
   ['@repeat'] = c.red,
   ['@operator'] = c.fg0, -- Use main fg or a subtle color
   ['@function'] = c.green,
-  ['@function.builtin'] = c.aqua, -- Often aqua for built-ins
+  ['@function.builtin'] = c.aqua,
   ['@type'] = c.yellow,
   ['@variable'] = c.fg0,
   ['@constant'] = c.purple,
@@ -238,20 +238,20 @@ local treesitter = {
   ['@number'] = c.purple,
   ['@boolean'] = c.purple,
   ['@field'] = c.blue, -- Fields often blue
-  ['@attribute'] = c.aqua, -- Attributes often aqua
+  ['@attribute'] = c.aqua,
   ['@namespace'] = c.aqua,
-  ['@parameter'] = c.blue, -- Parameters often blue
-  ['@punctuation.bracket'] = c.fg0, -- Match main fg
-  ['@punctuation.delimiter'] = c.fg0, -- Match main fg
-  ['@constructor'] = c.yellow, -- Constructors often yellow/type
+  ['@parameter'] = c.blue,
+  ['@punctuation.bracket'] = c.fg0,
+  ['@punctuation.delimiter'] = c.fg0,
+  ['@constructor'] = c.yellow,
 }
 
 for group, color in pairs(treesitter) do
   hi(group, color)
 end
 
-hi('LspReferenceText', nil, c.base04, 'underline')
-hi('LspReferenceRead', nil, c.base04, 'underline')
-hi('LspReferenceWrite', nil, c.base04, 'underline')
+hi('LspReferenceText', nil, c.bg3, 'none')
+hi('LspReferenceRead', nil, c.bg3, 'none')
+hi('LspReferenceWrite', nil, c.bg3, 'none')
 
 return M
