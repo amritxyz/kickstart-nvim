@@ -1,25 +1,23 @@
--- solarized-dark.lua
-
 local M = {}
 
--- Solarized Dark palette
+-- Selenized Dark palette
 local c = {
-  base03 = '#002b36',
-  base02 = '#073642',
-  base01 = '#586e75',
-  base00 = '#657b83',
-  base0 = '#839496',
-  base1 = '#93a1a1',
-  base2 = '#eee8d5',
-  base3 = '#fdf6e3',
-  yellow = '#a57c00',
-  orange = '#a65a2e',
-  red = '#b83838',
-  magenta = '#b8488a',
-  violet = '#5e66b8',
-  blue = '#268bd2',
-  cyan = '#2a9c96',
-  green = '#7c9000',
+  base00 = '#053d48',
+  base01 = '#0e4956',
+  base02 = '#275b69',
+  base03 = '#718b90',
+  base04 = '#adbcbc',
+  base05 = '#c8d7d8',
+  base06 = '#f0e4cc',
+  base07 = '#fef3da',
+  red = '#fd564e',
+  orange = '#f38649',
+  magenta = '#f176bd',
+  green = '#80b83c',
+  cyan = '#39c7b9',
+  blue = '#0096f5',
+  yellow = '#e3b230',
+  violet = '#a58cec',
 }
 
 -- Safe highlight function
@@ -46,25 +44,21 @@ if vim.fn.exists 'syntax_on' then
   vim.cmd 'syntax reset'
 end
 
--- vim.o.termguicolors = true
--- vim.o.background = 'dark'
--- vim.g.colors_name = 'solarized-dark-kakoune'
-
 -- === UI Elements ===
-hi('Normal', c.base0, c.base03)
-hi('LineNr', c.base01, c.base02)
-hi('CursorLineNr', c.base1, c.base02, 'bold')
-hi('StatusLine', c.base1, c.base02)
-hi('StatusLineNC', c.base00, c.base02)
+hi('Normal', c.base05, c.base00)
+hi('LineNr', c.base03, c.base01)
+hi('CursorLineNr', c.base05, c.base01, 'bold')
+hi('StatusLine', c.base05, c.base01)
+hi('StatusLineNC', c.base04, c.base01)
 hi('VertSplit', c.base02, c.base02)
-hi('Folded', c.base01, c.base02)
-hi('SignColumn', nil, c.base02)
+hi('Folded', c.base03, c.base02)
+hi('SignColumn', nil, c.base01)
 hi('ColorColumn', nil, c.base02)
-hi('CursorLine', nil, c.base02)
-hi('Visual', nil, '#30525c')
-hi('Pmenu', c.base1, c.base02)
-hi('PmenuSel', c.base03, c.yellow, 'bold')
-hi('WildMenu', c.base03, c.yellow, 'bold')
+hi('CursorLine', nil, c.base00)
+hi('Visual', nil, c.base02)
+hi('Pmenu', c.base05, c.base02)
+hi('PmenuSel', c.base00, c.yellow, 'bold')
+hi('WildMenu', c.base00, c.yellow, 'bold')
 hi('ErrorMsg', c.red, nil, 'bold')
 hi('WarningMsg', c.red)
 hi('Title', c.blue, nil, 'bold')
@@ -80,7 +74,7 @@ hi('Function', c.blue) -- function names
 hi('Identifier', c.blue) -- variables, parameters, methods
 hi('Type', c.yellow) -- types, classes
 hi('String', c.cyan)
-hi('Comment', c.base01)
+hi('Comment', c.base03)
 hi('Operator', c.green) -- =, +, -, etc.
 hi('Constant', c.violet) -- true, false, nil, numbers
 hi('PreProc', c.orange) -- #include, #define, etc.
@@ -88,7 +82,7 @@ hi('Special', c.orange) -- built-ins, meta
 hi('Number', c.violet)
 hi('Boolean', c.violet)
 hi('Tag', c.cyan)
-hi('Underlined', c.base1, nil, 'underline')
+hi('Underlined', c.base05, nil, 'underline')
 
 -- === Diagnostics ===
 hi('DiagnosticError', c.red)
@@ -97,18 +91,17 @@ hi('DiagnosticInfo', c.cyan)
 hi('DiagnosticHint', c.green)
 
 -- === TODO/INFO/NOTE ===
-hi('TodoHighlight', c.yellow, c.base03, 'bold')
-hi('FixHighlight', c.red, c.base03, 'bold')
-hi('NoteHighlight', c.green, c.base03, 'bold')
-hi('InfoHighlight', c.orange, c.base03, 'bold')
+hi('TodoHighlight', c.yellow, nil, 'bold')
+hi('FixHighlight', c.red, nil, 'bold')
+hi('NoteHighlight', c.green, nil, 'bold')
+hi('InfoHighlight', c.orange, nil, 'bold')
 vim.cmd [[
   augroup HighlightCommentsKeywords
     autocmd!
-    autocmd BufEnter,BufReadPost * call matchadd("TodoHighlight", "\\v\\s*TODO:")
-    autocmd BufEnter,BufReadPost * call matchadd("FixHighlight", "\\v\\s*FIX:")
-    autocmd BufEnter,BufReadPost * call matchadd("NoteHighlight", "\\v\\s*NOTE:")
-    autocmd BufEnter,BufReadPost * call matchadd("InfoHighlight", "\\v\\s*INFO:")
-  " INFO: VOid
+    autocmd BufEnter,BufReadPost * call matchadd("TodoHighlight", "\\v\\s*TODO")
+    autocmd BufEnter,BufReadPost * call matchadd("FixHighlight", "\\v\\s*FIX")
+    autocmd BufEnter,BufReadPost * call matchadd("NoteHighlight", "\\v\\s*NOTE")
+    autocmd BufEnter,BufReadPost * call matchadd("InfoHighlight", "\\v\\s*INFO")
   augroup END
 ]]
 
@@ -131,55 +124,53 @@ hi('SpellRare', nil, nil, 'undercurl', c.violet) -- Rare word
 hi('SpellLocal', nil, nil, 'undercurl', c.cyan) -- Locale/region specific
 
 -- === Search & Match ===
-hi('Search', c.base03, c.yellow, 'bold')
-hi('IncSearch', c.base03, c.orange, 'bold')
-hi('CurSearch', c.base03, c.red, 'bold')
+hi('Search', c.base00, c.yellow, 'bold')
+hi('IncSearch', c.base00, c.orange, 'bold')
+hi('CurSearch', c.base00, c.red, 'bold')
 hi('MatchParen', c.red, c.base02, 'bold')
 
 -- === Diff / Git ===
-hi('DiffAdd', c.green, c.base02)
-hi('DiffChange', c.yellow, c.base02)
-hi('DiffDelete', c.red, c.base02)
-hi('DiffText', c.orange, c.base02, 'bold')
-hi('GitSignsAdd', c.green, c.base02)
-hi('GitSignsChange', c.yellow, c.base02)
-hi('GitSignsDelete', c.red, c.base02)
+hi('DiffAdd', c.green, c.base01)
+hi('DiffChange', c.yellow, c.base01)
+hi('DiffDelete', c.red, c.base01)
+hi('DiffText', c.orange, c.base01, 'bold')
+hi('GitSignsAdd', c.green, c.base01)
+hi('GitSignsChange', c.yellow, c.base01)
+hi('GitSignsDelete', c.red, c.base01)
 
 -- === Tabs & Splits ===
-hi('TabLine', c.base0, c.base02)
-hi('TabLineSel', c.base03, c.blue, 'bold')
-hi('TabLineFill', c.base01, c.base02)
-hi('WinSeparator', c.base01, c.base02)
+hi('TabLine', c.base05, c.base02)
+hi('TabLineSel', c.base00, c.blue, 'bold')
+hi('TabLineFill', c.base03, c.base02)
+hi('WinSeparator', c.base03, c.base02)
 
 -- === Whitespace / misc ===
-hi('NonText', c.base01)
-hi('SpecialKey', c.base01)
-hi('Whitespace', c.base01)
+hi('NonText', c.base03)
+hi('SpecialKey', c.base03)
+hi('Whitespace', c.base03)
 hi('EndOfBuffer', c.base02)
 
 -- === Popup / Completion ===
 hi('PmenuSbar', nil, c.base02)
-hi('PmenuThumb', nil, c.base01)
+hi('PmenuThumb', nil, c.base03)
 
 -- === Cursor / selections ===
-hi('Cursor', c.base03, c.blue)
-hi('TermCursor', c.base03, c.blue)
-hi('TermCursorNC', c.base03, c.base01)
+hi('Cursor', c.base00, c.blue)
+hi('TermCursor', c.base00, c.blue)
+hi('TermCursorNC', c.base00, c.base03)
 
 -- === Telescope highlights ===
-hi('TelescopeNormal', c.base0, c.base03) -- main area
-hi('TelescopeBorder', c.base0, c.base03) -- border
--- hi('TelescopePromptNormal', c.base0, c.base02) -- prompt area
--- hi('TelescopePromptBorder', c.blue, c.base02) -- prompt border
+hi('TelescopeNormal', c.base05, c.base00) -- main area
+hi('TelescopeBorder', c.base05, c.base00) -- border
 hi('TelescopePromptPrefix', c.green, nil) -- prompt symbol (like >)
-hi('TelescopeSelection', c.base0, c.base02, 'bold') -- selected item
+hi('TelescopeSelection', c.base05, c.base02, 'bold') -- selected item
 hi('TelescopeSelectionCaret', c.red, c.base02, 'bold') -- caret
 hi('TelescopeMatching', c.orange) -- matched text
 hi('TelescopeMultiSelection', c.yellow) -- multi-selection items
-hi('TelescopeTitle', c.blue, c.base03, 'bold')
-hi('TelescopePreviewTitle', c.cyan, c.base03, 'bold')
+hi('TelescopeTitle', c.blue, c.base00, 'bold')
+hi('TelescopePreviewTitle', c.cyan, c.base00, 'bold')
 hi('TelescopePromptTitle', c.green, nil, 'bold')
-hi('TelescopeResultsTitle', c.base0, c.base03, 'bold')
+hi('TelescopeResultsTitle', c.base05, c.base00, 'bold')
 
 vim.cmd [[
   hi! link Function      Identifier
@@ -217,7 +208,7 @@ local treesitter = {
   ['@variable'] = c.base0,
   ['@constant'] = c.violet,
   ['@string'] = c.cyan,
-  ['@comment'] = c.base01,
+  ['@comment'] = c.base1,
   ['@number'] = c.violet,
   ['@boolean'] = c.violet,
   ['@field'] = c.base0,
@@ -229,8 +220,8 @@ for group, color in pairs(treesitter) do
   hi(group, color)
 end
 
-hi('LspReferenceText', nil, '#30525c')
-hi('LspReferenceRead', nil, '#30525c')
-hi('LspReferenceWrite', nil, '#30525c')
+hi('LspReferenceText', nil, c.base01)
+hi('LspReferenceRead', nil, c.base01)
+hi('LspReferenceWrite', nil, c.base01)
 
 return M
