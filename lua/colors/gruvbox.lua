@@ -9,8 +9,8 @@ local c = {
   bg3 = '#504945',
   bg4 = '#665c54',
 
-  fg0 = '#fbf1c7',
-  fg1 = '#ebdbb2',
+  fg0 = '#ebdbb2',
+  fg1 = '#fbf1c7',
   fg2 = '#d5c4a1',
   fg3 = '#bdae93',
   fg4 = '#a89984',
