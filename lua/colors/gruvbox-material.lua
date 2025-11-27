@@ -114,10 +114,10 @@ hi('DiagnosticInfo', c.blue) -- Changed to blue for info
 hi('DiagnosticHint', c.aqua) -- Changed to aqua for hint
 
 -- === TODO/INFO/NOTE ===
-hi('TodoHighlight', c.yellow, c.base03, 'bold')
-hi('FixHighlight', c.red, c.base03, 'bold')
-hi('NoteHighlight', c.green, c.base03, 'bold')
-hi('InfoHighlight', c.orange, c.base03, 'bold')
+hi('TodoHighlight', c.bg0, c.yellow, 'bold')
+hi('FixHighlight', c.bg0, c.red, 'bold')
+hi('NoteHighlight', c.bg0, c.green, 'bold')
+hi('InfoHighlight', c.bg0, c.orange, 'bold')
 vim.cmd [[
   augroup HighlightCommentsKeywords
     autocmd!
