@@ -7,11 +7,11 @@ A simple, minimal, modular neovim config inspired by [kickstart-nvim](https://gi
 ## Installation
 
 ```bash
-git clone --depth=1 https://github.com/amritxyz/kickstart-nvim.git ~/.config/nvim
+git clone --depth=1 https://codeberg.org/amrit/nvim.git ~/.config/nvim
 nvim
 ```
 
 ---
 
 ## Plugins (Via. Lazy.nvim)
-[**All-Plugins**](https://github.com/amritxyz/kickstart-nvim/blob/main/lua/plugins).
+[**All-Plugins**](https://codeberg.org/amrit/nvim/src/branch/main/lua/plugins).
