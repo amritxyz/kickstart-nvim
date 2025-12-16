@@ -26,6 +26,7 @@ return {
     'saadparwaiz1/cmp_luasnip',
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-path',
+    'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-nvim-lsp-signature-help',
   },
   config = function()
@@ -40,10 +41,23 @@ return {
           luasnip.lsp_expand(args.body)
         end,
       },
-      completion = { autocomplete = { 'TextChanged', 'InsertEnter' }, completeopt = 'menu,menuone,noinsert' },
+      completion = { autocomplete = false },
       mapping = cmp.mapping.preset.insert {
-        ['<C-n>'] = cmp.mapping.select_next_item(),
-        ['<C-p>'] = cmp.mapping.select_prev_item(),
+        ['<C-n>'] = cmp.mapping(function(_)
+          if cmp.visible() then
+            cmp.select_next_item()
+          else
+            cmp.complete()
+          end
+        end, { 'i', 's' }),
+
+        ['<C-p>'] = cmp.mapping(function(_)
+          if cmp.visible() then
+            cmp.select_prev_item()
+          else
+            cmp.complete()
+          end
+        end, { 'i', 's' }),
 
         -- Scroll the documentation window [b]ack / [f]orward
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),
@@ -75,6 +89,7 @@ return {
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
         { name = 'path' },
+        { name = 'buffer' },
         { name = 'nvim_lsp_signature_help' },
       },
     }
