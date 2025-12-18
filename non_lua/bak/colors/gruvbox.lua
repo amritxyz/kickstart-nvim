@@ -3,39 +3,44 @@
 local M = {}
 
 local c = {
-  bg0 = '#1d2021',
-  bg1 = '#32302f',
-  bg2 = '#3c3836',
-  bg3 = '#504945',
-  bg4 = '#665c54',
+  -- Backgrounds
+  bg0 = '#FAEBD7', -- main background
+  bg1 = '#F3E2C7', -- subtle panels
+  bg2 = '#EAD6B8',
+  bg3 = '#DFC8A6',
+  bg4 = '#D3BB94',
 
-  fg0 = '#ebdbb2',
-  fg1 = '#fbf1c7',
-  fg2 = '#d5c4a1',
-  fg3 = '#bdae93',
-  fg4 = '#a89984',
+  -- Foregrounds
+  fg0 = '#222222', -- main text
+  fg1 = '#000000', -- strong emphasis
+  fg2 = '#444444',
+  fg3 = '#666666',
+  fg4 = '#808080',
 
-  red = '#fb4934',
-  orange = '#fe8019',
-  yellow = '#fabd2f',
-  green = '#b8bb26',
-  aqua = '#8ec07c',
-  blue = '#83a598',
-  purple = '#d3869b',
+  -- ANSI colors (mapped from foot)
+  red = '#7f1010',
+  green = '#808000',
+  yellow = '#813e00',
+  blue = '#0186C7',
+  purple = '#721045',
+  aqua = '#00538b',
+  orange = '#813e00',
 
-  grey0 = '#a89984',
-  grey1 = '#bdae93',
-  grey2 = '#d5c4a1',
+  -- Greys
+  grey0 = '#808080',
+  grey1 = '#666666',
+  grey2 = '#444444',
 
-  bg_diff_green = '#282828',
-  bg_diff_red = '#282828',
-  bg_diff_blue = '#282828',
+  -- Diff / highlights
+  bg_diff_green = '#E6EDD6',
+  bg_diff_red = '#F2D6D6',
+  bg_diff_blue = '#D6E6F2',
 
-  bg_visual_red = '#32302f',
-  bg_visual_yellow = '#32302f',
+  bg_visual_red = '#E8C4C4',
+  bg_visual_yellow = '#E8D8B8',
 
-  bg_dim = '#282828',
-  bg_current_word = '#32302f',
+  bg_dim = '#F3E2C7',
+  bg_current_word = '#DFC8A6',
 }
 
 -- Safe highlight function

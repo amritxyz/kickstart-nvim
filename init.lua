@@ -3,7 +3,7 @@ require 'config.keymap'
 require 'config.undercurl'
 require 'config.api'
 require 'config.extras'
-require 'colors.theme'
+-- require 'modus-themes.init'
 
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
