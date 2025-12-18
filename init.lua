@@ -59,38 +59,22 @@ local function read_state()
   if not f then
     return 'light'
   end
-  local line = f:read '*l'
+  local line = f:read '*l' or ''
   f:close()
+  line = line:gsub('%s+', '')
   return line == 'dark' and 'dark' or 'light'
-end
-
--- Write state to file
-local function write_state(state)
-  local f = io.open(STATE_FILE, 'w')
-  if f then
-    f:write(state)
-    f:close()
-  end
 end
 
 -- Apply colorscheme based on state
 local function apply_theme(state)
   vim.cmd 'highlight clear'
-  if state ~= 'light' then
+  if state == 'light' then
     vim.opt.background = 'light'
     vim.cmd.colorscheme 'modus_operandi'
   else
     vim.opt.background = 'dark'
     vim.cmd.colorscheme 'modus_vivendi'
   end
-end
-
--- Toggle between light/dark
-local function toggle_theme()
-  local current = read_state()
-  local next_state = current == 'light' and 'dark' or 'light'
-  apply_theme(next_state)
-  write_state(next_state)
 end
 
 -- Initial apply at startup
@@ -108,10 +92,6 @@ if handle then
     end)
   end)
 end
-
--- ---- Signal listener ----
-local sig = uv.new_signal()
-sig:start('sigusr1', vim.schedule_wrap(toggle_theme))
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
