@@ -4,7 +4,7 @@ return {
   config = function()
     require('modus-themes').setup {
       style = 'modus_operandi',
-      variant = 'deuteranopia',
+      variant = 'default',
 
       styles = {
         functions = { italic = true },
