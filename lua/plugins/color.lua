@@ -3,7 +3,7 @@ return {
   priority = 1000,
   config = function()
     require('modus-themes').setup {
-      style = 'modus_vivendi',
+      style = 'modus_operandi',
       variant = 'default',
 
       styles = {
@@ -18,6 +18,6 @@ return {
         highlight.Boolean = { fg = color.green }
       end,
     }
-    vim.cmd.colorscheme 'modus_vivendi'
+    vim.cmd.colorscheme 'modus_operandi'
   end,
 }
